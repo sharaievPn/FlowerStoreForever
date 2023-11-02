@@ -5,10 +5,7 @@ import ucu.edu.apps.flowerstoreforever.Item;
 
 public class BasketDecorator extends AbstractDecorator {
     private Item item;
-    public BasketDecorator(Item currentItem) {
-        item = currentItem;
-        item.setDescription("Basket decorator");
-    }
+
     public BasketDecorator(FlowerBucket flowerBucket) {
         flowerBucket = new FlowerBucket(flowerBucket);
         item = flowerBucket;

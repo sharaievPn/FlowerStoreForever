@@ -35,14 +35,15 @@ public class DecoratorsTests {
     public void testPriceRibbon() {
         double basePrice = flowerBucket.price();
         double ribbonPrice = 40;
-        Assertions.assertEquals(basePrice + ribbonPrice, decoratedFlowerBucketRibbon.getPrice());
+        Assertions.assertEquals(basePrice + ribbonPrice,
+                decoratedFlowerBucketRibbon.getPrice());
     }
 
     @Test
     public void testDescriptionRibbon() {
-        String baseDescription = flowerBucket.getDescription();
         String expectedDescription = "Ribbon decorator";
-        Assertions.assertEquals(expectedDescription, decoratedFlowerBucketRibbon.getDescription());
+        Assertions.assertEquals(expectedDescription,
+                decoratedFlowerBucketRibbon.getDescription());
     }
 
     @Test
@@ -56,37 +57,41 @@ public class DecoratorsTests {
     public void testPriceBasket() {
         double basePrice = flowerBucket.price();
         double basketPrice = 4;
-        Assertions.assertEquals(basePrice + basketPrice, decoratedFlowerBucketBasket.getPrice());
+        Assertions.assertEquals(basePrice + basketPrice,
+                decoratedFlowerBucketBasket.getPrice());
     }
 
     @Test
     public void testDescriptionBasket() {
-        String baseDescription = flowerBucket.getDescription();
         String expectedDescription = "Basket decorator";
-        Assertions.assertEquals(expectedDescription, decoratedFlowerBucketBasket.getDescription());
+        Assertions.assertEquals(expectedDescription,
+                decoratedFlowerBucketBasket.getDescription());
     }
 
     @Test
     public void testItemOriginalFunctionalityBasket() {
-        Assertions.assertEquals(flowerBucket.getPrice(), decoratedFlowerBucketBasket.price());
+        Assertions.assertEquals(flowerBucket.getPrice(),
+                decoratedFlowerBucketBasket.price());
     }
 
     @Test
     public void testPricePaper() {
         double basePrice = flowerBucket.price();
         double paperPrice = 13;
-        Assertions.assertEquals(basePrice + paperPrice, decoratedFlowerBucketPaper.getPrice());
+        Assertions.assertEquals(basePrice + paperPrice,
+                decoratedFlowerBucketPaper.getPrice());
     }
 
     @Test
     public void testDescriptionPaper() {
-        String baseDescription = flowerBucket.getDescription();
         String expectedDescription = "Paper decorator";
-        Assertions.assertEquals(expectedDescription, decoratedFlowerBucketPaper.getDescription());
+        Assertions.assertEquals(expectedDescription,
+                decoratedFlowerBucketPaper.getDescription());
     }
 
     @Test
     public void testItemOriginalFunctionalityPaper() {
-        Assertions.assertEquals(flowerBucket.getPrice(), decoratedFlowerBucketPaper.price());
+        Assertions.assertEquals(flowerBucket.getPrice(),
+                decoratedFlowerBucketPaper.price());
     }
 }
