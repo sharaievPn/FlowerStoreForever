@@ -1,11 +1,18 @@
 package ucu.edu.apps.flowerstoreforever.decorators;
 
+import ucu.edu.apps.flowerstoreforever.FlowerBucket;
+import ucu.edu.apps.flowerstoreforever.FlowerService;
 import ucu.edu.apps.flowerstoreforever.Item;
 
 public class RibbonDecorator extends AbstractDecorator {
     private Item item;
     public RibbonDecorator(Item currentItem) {
         item = currentItem;
+        item.setDescription("Ribbon decorator");
+    }
+    public RibbonDecorator(FlowerBucket flowerBucket) {
+        flowerBucket = new FlowerBucket(flowerBucket);
+        item = flowerBucket;
         item.setDescription("Ribbon decorator");
     }
 

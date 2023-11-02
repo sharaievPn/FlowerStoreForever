@@ -26,9 +26,9 @@ public class DecoratorsTests {
         secondFlowePack = new FlowerPack(flowerSecond, 15);
         flowerBucket.add(firstFlowePack);
         flowerBucket.add(secondFlowePack);
-        decoratedFlowerBucketRibbon = new RibbonDecorator(new FlowerBucket(flowerBucket));
-        decoratedFlowerBucketBasket = new BasketDecorator(new FlowerBucket(flowerBucket));
-        decoratedFlowerBucketPaper = new PaperDecorator(new FlowerBucket(flowerBucket));
+        decoratedFlowerBucketRibbon = new RibbonDecorator(flowerBucket);
+        decoratedFlowerBucketBasket = new BasketDecorator(flowerBucket);
+        decoratedFlowerBucketPaper = new PaperDecorator(flowerBucket);
     }
 
     @Test
