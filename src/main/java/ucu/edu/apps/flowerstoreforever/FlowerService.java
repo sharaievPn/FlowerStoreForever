@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public class FlowerService {
-    public FlowerRepository flowerRepository;
+    private FlowerRepository flowerRepository;
     @Autowired
     public FlowerService(FlowerRepository flowerRepositoryCurrent) {
         this.flowerRepository = flowerRepositoryCurrent;

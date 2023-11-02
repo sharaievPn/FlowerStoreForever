@@ -2,10 +2,11 @@ package ucu.edu.apps.flowerstoreforever.decorators;
 
 import ucu.edu.apps.flowerstoreforever.Item;
 
-public class RibbonDecorator extends AbstractDecorator{
-    public RibbonDecorator(Item itemCurrent) {
-        description = "Ribbon decorator";
-        item = itemCurrent;
+public class RibbonDecorator extends AbstractDecorator {
+    private Item item;
+    public RibbonDecorator(Item currentItem) {
+        item = currentItem;
+        item.setDescription("Ribbon decorator");
     }
 
     @Override
@@ -15,7 +16,7 @@ public class RibbonDecorator extends AbstractDecorator{
 
     @Override
     public String getDescription() {
-        return description;
+        return item.getDescription();
     }
 
     @Override

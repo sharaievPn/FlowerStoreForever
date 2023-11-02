@@ -3,9 +3,10 @@ package ucu.edu.apps.flowerstoreforever.decorators;
 import ucu.edu.apps.flowerstoreforever.Item;
 
 public class PaperDecorator extends AbstractDecorator {
-    public PaperDecorator(Item itemCurrent) {
-        description = "Paper decorator";
-        item = itemCurrent;
+    private Item item;
+    public PaperDecorator(Item currentItem) {
+        item = currentItem;
+        item.setDescription("Paper decorator");
     }
 
     @Override
@@ -15,7 +16,7 @@ public class PaperDecorator extends AbstractDecorator {
 
     @Override
     public String getDescription() {
-        return description;
+        return item.getDescription();
     }
 
     @Override

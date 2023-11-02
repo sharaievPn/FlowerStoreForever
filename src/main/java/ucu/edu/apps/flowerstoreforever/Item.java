@@ -11,8 +11,12 @@ import lombok.Setter;
 public abstract class Item {
     @Getter
     @Setter
-    protected String description;
-    protected double price;
+    private String description;
+    private double price;
+    public Item(Item currentItem) {
+        description = currentItem.getDescription();
+        price = currentItem.getPrice();
+    }
 
     public abstract double price();
 }
