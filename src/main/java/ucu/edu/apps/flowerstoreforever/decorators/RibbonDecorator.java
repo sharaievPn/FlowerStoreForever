@@ -6,8 +6,7 @@ import ucu.edu.apps.flowerstoreforever.Item;
 public class RibbonDecorator extends AbstractDecorator {
     private Item item;
     public RibbonDecorator(FlowerBucket flowerBucket) {
-        flowerBucket = new FlowerBucket(flowerBucket);
-        item = flowerBucket;
+        item = new FlowerBucket(flowerBucket);
         item.setDescription("Ribbon decorator");
     }
 

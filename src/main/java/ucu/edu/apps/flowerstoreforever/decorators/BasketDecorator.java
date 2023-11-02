@@ -7,8 +7,7 @@ public class BasketDecorator extends AbstractDecorator {
     private Item item;
 
     public BasketDecorator(FlowerBucket flowerBucket) {
-        flowerBucket = new FlowerBucket(flowerBucket);
-        item = flowerBucket;
+        item = new FlowerBucket(flowerBucket);
         item.setDescription("Basket decorator");
     }
     @Override
